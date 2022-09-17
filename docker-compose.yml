@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  craftopia:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8787:6587"
+    volumes:
+      - /custom/path/to/my/data:/home/steam/craftopia-server/DedicatedServerSave

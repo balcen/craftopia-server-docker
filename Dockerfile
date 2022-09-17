@@ -8,3 +8,5 @@ WORKDIR /home/steam/craftopia-server
 COPY --chmod=755 entrypoint.sh ./
 
 ENTRYPOINT ["./entrypoint.sh"]
+
+EXPOSE 6587
