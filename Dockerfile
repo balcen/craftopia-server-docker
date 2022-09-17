@@ -9,8 +9,8 @@ RUN /home/steam/steamcmd/steamcmd.sh +force_install_dir /home/steam/craftopia-se
 
 WORKDIR /home/steam/craftopia-server
 
-RUN -ln -sf "/home/steam/craftopia-server/DedicatedServerSave/" "/data"
+RUN ln -sf "/home/steam/craftopia-server/DedicatedServerSave/" "/data"
 
-COPY --chmod=755 entrypoint ./
+COPY --chmod=755 entrypoint.sh ./
 
 ENTRYPOINT ["./entrypoint.sh"]
